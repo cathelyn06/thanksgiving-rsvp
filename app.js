@@ -33,7 +33,6 @@
     if (!r) return;
     $('name').value = r.name || '';
     if (r.going) setRadio('going', r.going);
-    $('party').value = Number(r.party) || 1;
     if (r.sambal) setRadio('sambal', r.sambal);
     if (r.dessert) setRadio('dessert', r.dessert);
     $('bring').value = r.bring || '';
@@ -41,13 +40,10 @@
   }
 
   function readForm() {
-    var p = parseInt($('party').value, 10);
-    if (!(p >= 1)) p = 1;
-    if (p > 8) p = 8;
     var r = {
       name: $('name').value.trim().slice(0, 60),
       going: getRadio('going'),
-      party: p,
+      party: 1,
       sambal: getRadio('sambal'),
       dessert: getRadio('dessert'),
       bring: $('bring').value.trim().slice(0, 80),
@@ -71,7 +67,7 @@
     if (!rs.length) { repliesEl.innerHTML = '<p class="empty">No replies yet. Yours will show up here first.</p>'; return; }
     var by = function (f, v) { return function (r) { return r[f] === v; }; };
     var yes = rs.filter(by('going', 'yes')), maybe = rs.filter(by('going', 'maybe')), no = rs.filter(by('going', 'no'));
-    var heads = yes.reduce(function (a, r) { return a + (Number(r.party) || 1); }, 0);
+    var heads = yes.length;
     var eaters = yes.concat(maybe);
     var n = function (f, v) { return eaters.filter(by(f, v)).length; };
     var sm = n('sambal', 'matah'), sb = n('sambal', 'bawang'), sx = n('sambal', 'both');
@@ -87,7 +83,6 @@
     rs.forEach(function (r) {
       var det = [];
       if (r.going !== 'no') {
-        if ((Number(r.party) || 1) > 1) det.push('Party of ' + Number(r.party));
         if (SAMBAL[r.sambal]) det.push(SAMBAL[r.sambal]);
         if (DESSERT[r.dessert]) det.push(r.dessert === 'bring' && r.bring ? 'Bringing ' + r.bring : DESSERT[r.dessert]);
       }
