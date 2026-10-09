@@ -10,7 +10,7 @@ Guests don't need any account. Replies are saved to a Google Sheet that only you
 
 - Say yes, maybe or no (everyone RSVPs for themselves)
 - Pick a sambal for the ayam daun jeruk: matah, bawang or both
-- Vote on dessert: the hosts bake the salt bread and ice cream and everyone chips in for supplies, or everyone brings dessert
+- Vote on dessert: the hosts bake the salt bread and ice cream and everyone chips in for supplies, or guests bring dessert (solo or teamed up with a friend)
 - Add allergies or a note (only you see this, in the sheet)
 - Send again under the same name to update their answer
 
