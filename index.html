@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Metro Girlies Thanksgiving</title>
+<meta name="description" content="Thanksgiving dinner, Monday October 12 at 5 PM. See the menu and RSVP.">
+<meta property="og:title" content="Metro Girlies Thanksgiving">
+<meta property="og:description" content="Monday, October 12 · 5:00 PM. See the menu and RSVP.">
+<meta name="theme-color" content="#152C1F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+
+<section class="card">
+<span class="stk" data-sticker="pumpkin" data-size="86" style="left:-10px;top:-22px;transform:rotate(-12deg)"></span>
+<span class="stk" data-sticker="maple" data-size="78" style="right:-8px;top:-18px;transform:rotate(14deg)"></span>
+<div class="eyebrow">You're invited to</div>
+<h1>Thanksgiving<br><em>Dinner</em></h1>
+<div class="when"><strong>Monday, October 12, 2026</strong><span>5:00 PM · 506-6468 Willingdon Ave</span></div>
+<div class="host">Hosted by Metro girlies!</div>
+</section>
+
+<section class="panel">
+<h2>The Menu</h2>
+<div class="dishes">
+<div class="dish"><span class="stk-inline" data-sticker="drumstick" data-size="56" style="transform:rotate(-8deg)"></span><div><div class="dish-name">Ayam Daun Jeruk</div><div class="dish-desc">Chicken cooked with fragrant kaffir lime leaves</div><div class="sambals"><span class="tag"><span data-sticker="chili" data-size="22"></span><b>Sambal Matah</b> raw shallot &amp; lemongrass</span><span class="tag"><span data-sticker="garlic" data-size="22"></span><b>Sambal Bawang</b> fried garlic &amp; chili</span></div></div></div>
+<div class="dish"><span class="stk-inline" data-sticker="corn" data-size="54" style="transform:rotate(12deg)"></span><div><div class="dish-name">Bakwan Jagung</div><div class="dish-desc">Crispy sweet corn fritters</div></div></div>
+<div class="dish"><span class="stk-inline" data-sticker="bakso" data-size="56" style="transform:rotate(-6deg)"></span><div><div class="dish-name">Bakso Goreng</div><div class="dish-desc">Golden fried meatballs</div></div></div>
+<div class="dish"><span class="stk-inline" data-sticker="bread" data-size="54" style="transform:rotate(-4deg)"></span><div><div class="dish-name">Salt Bread &amp; Ice Cream</div><div class="dish-desc">Fresh-baked salt bread and homemade ice cream for dessert</div></div></div>
+</div>
+<p class="dessert-note">Dessert is up for a vote: we bake it all and split the cost of supplies, or everyone brings something sweet. Pick below.</p>
+</section>
+
+<section class="panel" aria-labelledby="rsvp-h">
+<h2 id="rsvp-h">RSVP</h2>
+<form id="rsvp" novalidate>
+<div id="prev" class="msg" hidden></div>
+<div><label class="lbl" for="name">Your name</label><input type="text" id="name" name="name" maxlength="60" autocomplete="name"></div>
+<fieldset><legend>Can you make it?</legend><div class="opts">
+<label class="pill"><input type="radio" name="going" id="going-yes" value="yes"><span>Yes, I'll be there</span></label>
+<label class="pill"><input type="radio" name="going" id="going-maybe" value="maybe"><span>Maybe</span></label>
+<label class="pill"><input type="radio" name="going" id="going-no" value="no"><span>Can't make it</span></label>
+</div></fieldset>
+<div id="attend-fields" class="stack">
+<div><label class="lbl" for="party">How many of you? <span class="hint">Including you</span></label><input type="number" id="party" name="party" min="1" max="8" value="1" inputmode="numeric"></div>
+<fieldset><legend>Which sambal for your ayam?</legend><div class="opts">
+<label class="pill"><input type="radio" name="sambal" id="sambal-matah" value="matah"><span><span data-sticker="chili" data-size="20"></span>Matah</span></label>
+<label class="pill"><input type="radio" name="sambal" id="sambal-bawang" value="bawang"><span><span data-sticker="garlic" data-size="20"></span>Bawang</span></label>
+<label class="pill"><input type="radio" name="sambal" id="sambal-both" value="both"><span>Both, please</span></label>
+</div></fieldset>
+<fieldset><legend>How should we do dessert?</legend><div class="choices">
+<label class="choice"><input type="radio" name="dessert" id="dessert-bake" value="bake"><span><b><span data-sticker="bread" data-size="26"></span>We bake it all</b><i>We make the salt bread and homemade ice cream, and everyone chips in for supplies. We'll share the total after shopping.</i></span></label>
+<label class="choice"><input type="radio" name="dessert" id="dessert-bring" value="bring"><span><b><span data-sticker="cone" data-size="26"></span>Everyone brings dessert</b><i>Each guest brings something sweet to share instead.</i></span></label>
+</div></fieldset>
+<div id="bring-field" hidden><label class="lbl" for="bring">What would you bring? <span class="hint">Optional</span></label><input type="text" id="bring" name="bring" maxlength="80" placeholder="e.g. Pumpkin pie"></div>
+</div>
+<div><label class="lbl" for="note">Allergies or a note <span class="hint">Optional, only the hosts see this</span></label><input type="text" id="note" name="note" maxlength="200"></div>
+<div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+<div id="msg" class="msg" hidden role="status"></div>
+<button type="submit" class="send" id="send">Send RSVP</button>
+</form>
+</section>
+
+<section class="panel" aria-labelledby="who-h">
+<h2 id="who-h">Who's coming</h2>
+<div id="replies"><p class="empty">Loading replies…</p></div>
+</section>
+
+</main>
+<script src="config.js"></script>
+<script src="stickers.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
