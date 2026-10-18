@@ -4,7 +4,7 @@ An invitation page with the menu, an RSVP form and a live "Who's coming" list.
 Guests don't need any account. Replies are saved to a Google Sheet that only you can edit.
 
 - **When:** Monday, October 12, 2026 at 5:00 PM
-- **Where:** 506-6468 Willingdon Ave
+- **Where:** abc xxx Ave
 
 ## What guests can do
 
